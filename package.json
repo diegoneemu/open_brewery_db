@@ -2,11 +2,12 @@
   "name": "open_brewery_db",
   "version": "1.0.0",
   "description": "Open Brewery DB App write in angularjs",
-  "main": "server/index.js",
   "scripts": {
     "server:test": "node scripts/test.js server --passWithNoTests",
     "server:test:watch": "yarn run server:test --watch",
     "server:test:staged": "yarn run test -- --findRelatedTests",
+    "preserver:start": "tsc -p ./server/tsconfig.json",
+    "server:start": "tsc -p ./server/tsconfig.json -w & nodemon ./server/dist/index.js",
     "test:ci": "yarn run test -- --coverage",
     "prepare": "husky install"
   },

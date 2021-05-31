@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2019",
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "rootDir": "src",
+    "sourceMap": true,
+    "rootDirs": ["src", "tests"],
     "baseUrl": "src",
+    "paths": {
+      "@/tests/*": ["../tests/*"],
+      "@/*": ["*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -20,7 +20,6 @@
     "isolatedModules": true,
     "noEmit": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "tests"],
+  "exclude": []
 }
