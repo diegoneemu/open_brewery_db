@@ -1,6 +1,6 @@
 {
-  "*.{ts,tsx}": [
-    "eslint 'server/src/**' --fix",
+  "*.{ts}": [
+    "eslint . --fix",
 		"yarn run test:staged",
   ]
 }
